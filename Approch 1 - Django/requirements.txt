@@ -46,7 +46,7 @@ python-apt==1.7.0
 python-debian==0.1.33
 pytz==2018.7
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.1
 redis==2.10.6
 reportlab==3.5.6
 requests==2.18.4
