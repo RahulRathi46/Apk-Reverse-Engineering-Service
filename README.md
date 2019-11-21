@@ -1,58 +1,12 @@
-## Project Title
+## Apk-Reverse-Engineering-Service
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3)](https://www.python.org)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+A tool for reverse engineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications. It also makes working with an app easier because of the project like file structure and automation of some repetitive tasks like building apk, etc.
 
-This is where your any motivation description should go. Try and limit it to a paragraph or two, and maybe some discription
-on the objective of the project.
+It is NOT intended for piracy and other non-legal uses. It could be used for localizing, adding some features or support for custom platforms, analyzing applications and much more.
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-dataset/
-scripts/
-notebooks/
-docs/
-```
-## Table of Contents (Optional)
-
-- [Installation](#installation)
-- [Clone](#Clone)
-- [Setup](#Setup)
-- [Usage](#Clone)
-- [Changelog](#Changelog)
-- [Contributing](#contributing)
-- [Credits](#Credits)
-
-## Installation
-
-Via Package Manager Name
-
-``` 
-$ cmd to install all requirements
-```
-
-## Clone
-
-```
-git clone [repo url]
-```
-
-## Setup
-
-```
-if requide
-```
-
-## Usage
-
-``` 
-Get started help and codes
-```
+Motivation for this project is when i faced the similer problem while devloping a app that needs a feature but i don't have an idea what that is called and how to make that feature in my app. While searching web i come across the some webserivices that allows Reverse-Engineering and it stick with me what goes in backend to deploy this kind of service.
 
 ## Changelog
 
@@ -68,5 +22,6 @@ If you discover any security related issues, please email :author_email instead 
 
 ## Credits
 
-- [:author_name][link-author]
-- [All Contributors][link-contributors]
+- Rahul Rathi
+- https://ibotpeaches.github.io/Apktool/
+- https://github.com/skylot/jadx
