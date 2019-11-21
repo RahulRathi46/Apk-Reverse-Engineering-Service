@@ -1,0 +1,558 @@
+<?php $tool = htmlspecialchars($tool); ?>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>JADX : Exact java Source code - ✅ Apk decompiler ✅</title>
+    <meta name="description"
+          content="This Option can provide exact java decompilers source code from the android apk file and process speed is increase.">
+
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131744827-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-131744827-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1995820977131583');
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=1995820977131583&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1595802385937715",
+            enable_page_level_ads: true
+        });
+    </script>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="vendor/img/brand.png" width="32" height="32" alt=""/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"/>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/search"><span style="color: #28a745">Free Code</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/privacy">Privacy Policy</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Call to Ads Well -->
+    <div class="card my-4 text-center">
+        <div class="card-body">
+            <!-- index page -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1595802385937715"
+                 data-ad-slot="3284121197"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+
+    <!-- Call to queue full Well -->
+    <div id="queue-dev" class="jumbotron bg-danger my-4" style="display: none;">
+        <h1 class="display-5">Queue Full!</h1>
+        <p class="lead">
+            We are Sorry, Currently We are Exprencing OverLoad Kindly Vist After Some Time.
+        </p>
+    </div>
+
+    <!--    upload dev-->
+    <div id="upload-dev" class="row my-4">
+        <div class="col-lg-7">
+            <img class="img-fluid rounded" id="browse" height="700px" src="/vendor/img/one.png" alt="">
+            <input type="file" id="file" accept=".apk" style="display: none;" name="file"/>
+        </div>
+
+
+        <div class="col-lg-5">
+            <br/>
+            <h4>PLAYGROUND</h4>
+            <p>Select appropriate option below OR Use guide section below for better understanding</p>
+            <ul class="list-group">
+                <a class="text-secondary" href="/">
+                    <li class="list-group-item <?php if ($tool == 'both') {
+                        echo 'list-group-item-info';
+                    } ?>">Complete Decode (Recommended)
+                    </li>
+                </a>
+                <a class="text-secondary" href="/apktool">
+                    <li class="list-group-item <?php if ($tool == 'apktool') {
+                        echo 'list-group-item-info';
+                    } ?>">Apktool (Android Res Decode Only)
+                    </li>
+                </a>
+                <a class="text-secondary" href="/jadx">
+                    <li class="list-group-item <?php if ($tool == 'jadx') {
+                        echo 'list-group-item-info';
+                    } ?>">Jadx (Java Code)
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="progress-dev" class="jumbotron my-4 bg-light text-justify " style="display: none;">
+        <h1 class="display-5">UPLOADING.....!</h1>
+        <p class="lead">
+            With the selected option, your file from your computer is uploading and the system performs its task note
+            that it is not allowed to submit another task while one is in progress.
+        </p>
+        <p>LOG : <span id="msg"/></p>
+        <div class="progress">
+            <div id="progress"
+                 class="progress-bar  bg-success progress-bar-striped progress-bar-animated text-white"
+                 style="width:20%;"></div>
+        </div>
+    </div>
+
+    <div id="error-dev" class="jumbotron my-4 bg-light text-justify " style="display: none;">
+        <h1 class="display-5">RUNTIME ERROR.....!</h1>
+        <p class="lead">
+            An application error occurred on the server. The current custom error settings for this application prevent
+            the details of the application error from being viewed remotely (for security reasons). Please Submit report
+            by email: Apkdecompile@gmail.com
+        </p>
+        <p>LOG : <span id="emsg"></span></p>
+        <div class="progress">
+            <div
+                    class="progress-bar bg-danger progress-bar-striped progress-bar-animated text-white"
+                    style="width:100%;">100%
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Ads Well -->
+    <div class="card my-4 text-center">
+        <div class="card-body">
+            <!-- index 2 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-1595802385937715"
+                 data-ad-slot="2047061147"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-header text-capitalize text-center">
+                    OPTIONS
+                </div>
+                <div class="card-body ">
+                    <li>
+                        <strong>SELECT</strong> - an appropriate option, for detail explanation find guide below
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-header text-capitalize text-center">
+                    APK
+                </div>
+                <div class="card-body">
+                    <li>
+                        <strong>UPLOAD</strong> - upload apk and if do not have apk
+                        <a href="https://apkpure.com">Find Here!</a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-header text-capitalize text-center">
+                    RESULT
+                </div>
+                <div class="card-body">
+                    <li>
+                        <strong>WAIT</strong> - no special actions required,we will process your apk
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-md-4 -->
+    </div>
+
+    <!-- Call to Ads Well -->
+    <div class="card my-4 text-center">
+        <div class="card-body">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-1595802385937715"
+                 data-ad-slot="1930854538"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- /.row -->
+    <div class="row my-4 ">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    GUIDE
+                </div>
+                <div class="card-body text-justify">
+                    <ul>
+                        <li>
+                            <p><strong class="text-capitalize">how to select decode options</strong></p>
+                            <ol>
+                                <li><strong>BOTH</strong> - Best option ( <span class="text-danger text-capitalize">default</span>
+                                    )
+                                    <p>
+                                        THIS = Apktool + Jadx (use this option for complete apk decompile or java
+                                        decompile) we automatic process apk with
+                                        both and will give you the best result of both the world. NOTE : You get
+                                        complete output of both the tools which include
+                                        smallii , xml , java and other android files because this option need to process
+                                        both the outputs (It take more then one options).
+                                    </p>
+                                </li>
+
+                                <li><strong>APKTOOL</strong> - If need res (xml , assects etc)
+                                    <p>
+                                        AKPTOOL = Best resource files (use this option if you are interested in apk
+                                        resources )This option perform
+                                        very fast and provide best decompile for this file . Note that this option also
+                                        provide smallii and other
+                                        associated files.
+                                    </p>
+                                </li>
+
+                                <li><strong>JADX</strong> - If need java code
+                                    <p>JADX = Best java decompile or decode (use this option only if interested in java
+                                        code ). This option performs very fast
+                                        and provide best decompile of java code. Note this file also provide android
+                                        resource and associated files with java.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p><strong class="text-capitalize">how to Read decoded result</strong></p>
+                            <ul>
+                                <li><strong>APKTOOL</strong>
+                                    <p>
+                                    <ol>
+                                        <li>open zip and locate apktool folder</li>
+                                        <li>navigate to res folder for android resource like design , icon etc.</li>
+                                        <li>optional navigate other associated files as per requirement</li>
+                                        <li>option use smallii decoder for java code or use JADX or COMPLETE DECODE</li>
+                                    </ol>
+                                    </p>
+                                </li>
+
+                                <li><strong>JADX</strong>
+                                    <p>
+                                    <ol>
+                                        <li>open zip and locate jadx folder</li>
+                                        <li>navigate to src folder for android java files</li>
+                                        <li>Navigate other associated files as per requirement.</li>
+                                        <li>Use res for ui reference. for ui/resources COMPLTETE DECODE or APKTOOL
+                                            Strongly suggested
+                                        </li>
+                                    </ol>
+                                    </p>
+                                </li>
+                                <li class="item"><p class="text-danger">NOTE COMPLTE DECODE OPTION WILL REQUIRE ALL THE
+                                        ABOVE STEPS AS PER REQUIREMENTS</p></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p><strong class="text-capitalize">declaration</strong></p>
+                            <p>
+                            <ul>
+                                <li>
+                                    Reverse engineering, also called back engineering, is the process by which a
+                                    man-made object is
+                                    deconstructed to reveal its designs, architecture, or to extract knowledge from the
+                                    object;
+                                    similar to scientific research, the only difference being that scientific research
+                                    is about a
+                                    natural phenomenon.<br/>
+                                    <strong>Please, only use it for legitimate purposes</strong>
+                                </li>
+                            </ul>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p><strong class="text-capitalize">credits</strong></p>
+                            <ul>
+                                <li><strong class="text-capitalize">apktool&nbsp;</strong><a
+                                            href="https://ibotpeaches.github.io/Apktool/">https://ibotpeaches.github.io/Apktool</a>
+                                </li>
+                                <li><strong class="text-capitalize">jadx&nbsp;</strong><a
+                                            href="https://sourceforge.net/projects/jadx/files/">https://sourceforge.net/projects/jadx/files</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-4 ">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    OUR OFFERING
+                </div>
+                <div class="card-body text-justify">
+                    <p class="text-capitalize text-justify">
+                        after struggling in learning an deresearching how to do we found
+                        we can use reverse eng to find references from already app for features and how to use .
+                        we collected set of tools and resource which can help in order to make for next app research
+                        easy
+                    </p>
+                    <ul>
+                        <li><strong class="text-capitalize">reverser engineering</strong></li>
+                        <li><strong class="text-capitalize">ui reference</strong><span
+                                    class="text-info text-capitalize">&nbsp;comming soon</span></li>
+                        <li><strong class="text-capitalize">android library</strong><span
+                                    class="text-info text-capitalize">&nbsp;comming soon</span></li>
+                        <li><strong class="text-capitalize">android full code</strong><span
+                                    class="text-info text-capitalize">&nbsp;comming soon</span></li>
+                        <li><strong class="text-capitalize">assects</strong><span class="text-info text-capitalize">&nbsp;comming soon</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-4 ">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    TOOLS
+                </div>
+                <div class="card-body text-justify">
+                    <p>Interested in tools we have used and ingredients we have</p>
+                    <ul>
+                        <li>
+                            <strong>Plateform Tools</strong> - PHP , java & python
+                            <p>
+                                <ol>
+                                    <li>
+                                        <strong>Java</strong>
+                            <p>Java is a general-purpose computer-programming language that is concurrent, class-based,
+                                object-oriented, and specifically designed to have as few implementation dependencies as
+                                possible
+                            </p>
+                        </li>
+                        <li>
+                            <strong>PHP</strong>
+                            <p> PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source
+                                general-purpose
+                                scripting language that is especially suited for web development and can be embedded
+                                into HTML.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Python</strong>
+                            <p> Python is an interpreted, high-level, general-purpose programming language. Created by
+                                Guido van
+                                Rossum and first released in 1991, Python has a design philosophy that emphasizes code
+                                readability, notably using significant whitespace. It provides constructs that enable
+                                clear
+                                programming on both small and large scales.
+                            </p>
+                        </li>
+                        </ol>
+                        </p>
+                        </li>
+                        <li>
+                            <strong>apktool</strong>
+                            <p>
+                                The resources in an Android APK file are compressed and stored in binary format.
+                                Apktool (https://ibotpeaches.github.io/Apktool/) is an instrument for reverse
+                                engineering 3rd party, closed, binary Android apps. It can decode resources to its
+                                original form .You may use this website to extract and research assets and the manifest
+                                file.
+                                To produce Java source code, try Android apk decompiler.
+                            </p>
+                        </li>
+
+                        <li>
+                            <strong>jadx</strong>
+                            <p>
+                                Android application package (APK) is the package file format used to distribute and
+                                install application software onto Google's Android operating system.
+                                This site uses a perfect open-source APK and DEX decompiler called Jadx:
+                                https://sourceforge.net/projects/jadx/files/
+                                Jadx decompiles .class and .jar files, but also it produces Java source code from
+                                Android Dex and Apk files.
+                                Please, only use it for legitimate purposes.
+
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-4 ">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    Terms Of Usage
+                </div>
+                <div class="card-body text-justify">
+                    <ul>
+                        <li>This is only for research and social engineering purpose</li>
+                        <li>At this time, we only support 1 task at a time</li>
+                        <li>We only support application of less than 100mb</li>
+                        <li>If you need to extract and decode complete apk to nearly original use complete decode</li>
+                        <li>if you need to extract and decode resources to nearly original use apktool</li>
+                        <li>if you need to extract and decode java code to nearly original use Jadx</li>
+                        <li>please report error with apk link / file at Apkdecompile@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container -->
+</body>
+
+<!--     Footer-->
+<footer class="section footer-classic context-dark bg-dark">
+    <div class="container">
+        <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+                <div class="pr-xl-4">
+                    &nbsp;
+                    <!-- Rights-->
+                    <p class="rights"><span>©</span><span class="copyright-year">2018</span>
+                        <span>ApkDecompile</span><span>.</span><span>All Rights Reserved.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                &nbsp;
+                <dl class="contact-list">
+                    Email: <a href="mailto:#">Apkdecompile@gmail.com</a>
+                </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+                &nbsp;
+                <dl class="contact-list">
+                    <a href="/sitemap.xml">Sitemap</a> | &nbsp;
+                    <a href="/about">About</a> |&nbsp;
+                    <a href="/privacy">Privicy Policy</a>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters social-container">
+        <div class="col">
+            <a class="social-inner" href="https://www.facebook.com/bhav.decompile.7"><span
+                        class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+        <div class="col"><a class="social-inner" href="https://twitter.com/ADecompiler"><span
+                        class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+        <div class="col"><a class="social-inner" href="#"><span
+                        class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/index.js"></script>
+<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+</html>
